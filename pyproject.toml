@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matterhook"
+version = "0.3"
+description = "Interact with Mattermost incoming webhooks easily."
+readme = "README.rst"
+authors = [{ name = "numberly" }]
+license = { text = "BSD" }
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "requests>=2.9.0",
+]
+
+[dependency-groups]
+test = [
+  "black>=19.10b0",
+  "flake8>=3.8.3",
+  "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/numberly/matterhook"
+Download = "https://github.com/numberly/matterhook/tags"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = true
+platforms = ["any"]
+
+[tool.setuptools.packages.find]
+where = ["."] # Matches the default behavior of find_packages()
